@@ -10,18 +10,23 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class BaseCollectionController: UICollectionViewController {
+class BaseCollectionController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    lazy var activityIndicatorView: UIActivityIndicatorView = {
+        return UIActivityIndicatorView().toLoadingStyle(start: true)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+        addAndStartActivityIndicator()
     }
     
     private func setUpCollectionView(){
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
             flowLayout.scrollDirection = .vertical
         }
-        collectionView?.backgroundColor = .yellow
+        collectionView?.backgroundColor = .white
         collectionView?.alwaysBounceVertical = true
     }
     
@@ -36,5 +41,16 @@ class BaseCollectionController: UICollectionViewController {
     
     func registerCell(cellClass: Swift.AnyClass?, identifier: String){
         self.collectionView!.register(cellClass, forCellWithReuseIdentifier: identifier)
+    }
+    
+    private func addAndStartActivityIndicator(){
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.snp.makeConstraints { (make) in
+            make.center.equalTo(view)
+        }
+    }
+    
+    func stopLoading(){
+        activityIndicatorView.stopAnimating()
     }
 }

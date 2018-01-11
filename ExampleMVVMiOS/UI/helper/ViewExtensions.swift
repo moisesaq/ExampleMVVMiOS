@@ -70,17 +70,11 @@ extension UIImageView {
 
 extension UILabel {
     
-    func toCustomLabel(textColor: UIColor, numberOfLines: Int, fontSize: UIFont) -> UILabel{
+    func toCustomLabel(textColor: UIColor! = .black, numberOfLines: Int! = 1, fontSize: UIFont) -> UILabel{
         self.text = "Text label"
         self.textColor = textColor
         self.numberOfLines = numberOfLines
         self.font = fontSize
-        return self
-    }
-    
-    func toLabelWithAlignment(text: String) -> UILabel {
-        self.text = text
-        self.textAlignment = .center
         return self
     }
 }

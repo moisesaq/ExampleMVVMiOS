@@ -6,23 +6,20 @@
 //  Copyright © 2018 Moises Apaza. All rights reserved.
 //
 
-/*{
-    "id": 1515012864778,
-    "category": {
-        "id": 0,
-        "name": "1234"
-    },
-    "name": "doggie_updated",
-    "photoUrls": [
-    "string"
-    ],
-    "tags": [
-    {
-    "id": 0,
-    "name": "1234"
-    }
-    ],
-    "status": "sold"
-}*/
+
 
 import Foundation
+
+class Pet{
+    var id: String?
+    var name: String?
+    var category: String?
+    var photoUrl: String?
+    
+    init(id: String, name: String, category: String, photoUrl: String) {
+        self.id = id
+        self.name = name
+        self.category = category
+        self.photoUrl = photoUrl
+    }
+}

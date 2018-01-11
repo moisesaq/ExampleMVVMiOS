@@ -9,15 +9,21 @@
 /* Begin PBXBuildFile section */
 		45FCBA8576501A083CEF296D /* Pods_ExampleMVVMiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5A55BF59F7CA297E6AD029 /* Pods_ExampleMVVMiOSTests.framework */; };
 		7F69EE032DB46410A2B30C51 /* Pods_ExampleMVVMiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86A0BCFA67FE13449E5B582 /* Pods_ExampleMVVMiOSUITests.framework */; };
+		805208192007036C0054B901 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805208182007036C0054B901 /* ServiceManager.swift */; };
+		8052081C200703A10054B901 /* ServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052081B200703A10054B901 /* ServiceContract.swift */; };
+		8052081E200706200054B901 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052081D200706200054B901 /* API.swift */; };
+		80520821200708B50054B901 /* PetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80520820200708B50054B901 /* PetParser.swift */; };
+		8052082320070A050054B901 /* ParserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082220070A050054B901 /* ParserContract.swift */; };
+		8052082520071DF10054B901 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082420071DF10054B901 /* BaseCell.swift */; };
+		8052082820071E090054B901 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082720071E090054B901 /* PetCell.swift */; };
+		8052082A200732890054B901 /* PetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80520829200732890054B901 /* PetsViewModel.swift */; };
 		806826D22005B5AF00479FB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826D12005B5AF00479FB6 /* AppDelegate.swift */; };
-		806826D42005B5AF00479FB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826D32005B5AF00479FB6 /* ViewController.swift */; };
 		806826D72005B5B000479FB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806826D52005B5B000479FB6 /* Main.storyboard */; };
 		806826D92005B5B000479FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806826D82005B5B000479FB6 /* Assets.xcassets */; };
 		806826DC2005B5B000479FB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806826DA2005B5B000479FB6 /* LaunchScreen.storyboard */; };
 		806826E72005B5B000479FB6 /* ExampleMVVMiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826E62005B5B000479FB6 /* ExampleMVVMiOSTests.swift */; };
 		806826F22005B5B000479FB6 /* ExampleMVVMiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826F12005B5B000479FB6 /* ExampleMVVMiOSUITests.swift */; };
 		806827002005CCD700479FB6 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826FF2005CCD700479FB6 /* Pet.swift */; };
-		806827022005CCE500479FB6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827012005CCE500479FB6 /* Category.swift */; };
 		806827062005D25D00479FB6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827052005D25D00479FB6 /* MainNavigationController.swift */; };
 		806827082005D2FE00479FB6 /* PetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827072005D2FE00479FB6 /* PetsController.swift */; };
 		8068270B2005D8A300479FB6 /* BaseCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068270A2005D8A300479FB6 /* BaseCollectionController.swift */; };
@@ -50,9 +56,16 @@
 		284D12C28114B1786897C3E4 /* Pods-ExampleMVVMiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleMVVMiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleMVVMiOSUITests/Pods-ExampleMVVMiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6516D774B83078E9A0A306B1 /* Pods_ExampleMVVMiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleMVVMiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1C0F12CA366CBD9C39F8C6 /* Pods-ExampleMVVMiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleMVVMiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleMVVMiOSTests/Pods-ExampleMVVMiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		805208182007036C0054B901 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		8052081B200703A10054B901 /* ServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContract.swift; sourceTree = "<group>"; };
+		8052081D200706200054B901 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		80520820200708B50054B901 /* PetParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetParser.swift; sourceTree = "<group>"; };
+		8052082220070A050054B901 /* ParserContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserContract.swift; sourceTree = "<group>"; };
+		8052082420071DF10054B901 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		8052082720071E090054B901 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
+		80520829200732890054B901 /* PetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewModel.swift; sourceTree = "<group>"; };
 		806826CE2005B5AF00479FB6 /* ExampleMVVMiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleMVVMiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806826D12005B5AF00479FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		806826D32005B5AF00479FB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		806826D62005B5B000479FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		806826D82005B5B000479FB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		806826DB2005B5B000479FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +77,6 @@
 		806826F12005B5B000479FB6 /* ExampleMVVMiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleMVVMiOSUITests.swift; sourceTree = "<group>"; };
 		806826F32005B5B000479FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		806826FF2005CCD700479FB6 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		806827012005CCE500479FB6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		806827052005D25D00479FB6 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		806827072005D2FE00479FB6 /* PetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsController.swift; sourceTree = "<group>"; };
 		8068270A2005D8A300479FB6 /* BaseCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionController.swift; sourceTree = "<group>"; };
@@ -118,6 +130,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8052081A200703730054B901 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				805208182007036C0054B901 /* ServiceManager.swift */,
+				8052081B200703A10054B901 /* ServiceContract.swift */,
+				8052081D200706200054B901 /* API.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		8052081F200708A50054B901 /* parsers */ = {
+			isa = PBXGroup;
+			children = (
+				80520820200708B50054B901 /* PetParser.swift */,
+				8052082220070A050054B901 /* ParserContract.swift */,
+			);
+			path = parsers;
+			sourceTree = "<group>";
+		};
+		8052082620071DF70054B901 /* pets */ = {
+			isa = PBXGroup;
+			children = (
+				806827072005D2FE00479FB6 /* PetsController.swift */,
+				8052082720071E090054B901 /* PetCell.swift */,
+				80520829200732890054B901 /* PetsViewModel.swift */,
+			);
+			path = pets;
+			sourceTree = "<group>";
+		};
 		806826C52005B5AF00479FB6 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +184,7 @@
 		806826D02005B5AF00479FB6 /* ExampleMVVMiOS */ = {
 			isa = PBXGroup;
 			children = (
+				8052081A200703730054B901 /* ApiService */,
 				806827042005D0A100479FB6 /* UI */,
 				806827032005CD0700479FB6 /* Model */,
 				806826D12005B5AF00479FB6 /* AppDelegate.swift */,
@@ -175,8 +217,8 @@
 		806827032005CD0700479FB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8052081F200708A50054B901 /* parsers */,
 				806826FF2005CCD700479FB6 /* Pet.swift */,
-				806827012005CCE500479FB6 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,12 +226,10 @@
 		806827042005D0A100479FB6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8052082620071DF70054B901 /* pets */,
 				806827102005D96B00479FB6 /* helper */,
 				806827092005D87900479FB6 /* base */,
-				806826D32005B5AF00479FB6 /* ViewController.swift */,
 				806827052005D25D00479FB6 /* MainNavigationController.swift */,
-				806827072005D2FE00479FB6 /* PetsController.swift */,
-				806827112005E10B00479FB6 /* ControllerContract.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -197,7 +237,9 @@
 		806827092005D87900479FB6 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				806827112005E10B00479FB6 /* ControllerContract.swift */,
 				8068270A2005D8A300479FB6 /* BaseCollectionController.swift */,
+				8052082420071DF10054B901 /* BaseCell.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -503,15 +545,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				806827062005D25D00479FB6 /* MainNavigationController.swift in Sources */,
+				8052082820071E090054B901 /* PetCell.swift in Sources */,
 				806827002005CCD700479FB6 /* Pet.swift in Sources */,
 				8068270D2005D90200479FB6 /* ViewExtensions.swift in Sources */,
-				806826D42005B5AF00479FB6 /* ViewController.swift in Sources */,
+				8052082320070A050054B901 /* ParserContract.swift in Sources */,
+				8052082520071DF10054B901 /* BaseCell.swift in Sources */,
+				8052082A200732890054B901 /* PetsViewModel.swift in Sources */,
 				806827082005D2FE00479FB6 /* PetsController.swift in Sources */,
 				806827122005E10B00479FB6 /* ControllerContract.swift in Sources */,
+				805208192007036C0054B901 /* ServiceManager.swift in Sources */,
+				8052081C200703A10054B901 /* ServiceContract.swift in Sources */,
+				8052081E200706200054B901 /* API.swift in Sources */,
 				8068270B2005D8A300479FB6 /* BaseCollectionController.swift in Sources */,
 				806826D22005B5AF00479FB6 /* AppDelegate.swift in Sources */,
 				8068270F2005D94F00479FB6 /* UtilsExtensions.swift in Sources */,
-				806827022005CCE500479FB6 /* Category.swift in Sources */,
+				80520821200708B50054B901 /* PetParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
