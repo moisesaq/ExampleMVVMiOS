@@ -11,8 +11,10 @@ import UIKit
 private let petCellId = "PetCell"
 
 class PetsController: BaseCollectionController, ControllerContract {
-
-    var pets: [Pet] = []
+    
+    lazy var petsViewModel: PetsViewModelRepresentable = {
+        return PetsViewModel(delegate: self)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,35 +24,61 @@ class PetsController: BaseCollectionController, ControllerContract {
     func setUp() {
         changeTitle(title: "Pets")
         registerCell(cellClass: PetCell.self, identifier: petCellId)
-        
-        ServiceManager.sharedInstance.getPetsByStatus(status: "pending", completion: { (pets) in
-            self.pets += pets
-            self.collectionView?.reloadData()
-            self.stopLoading()
-        }) { (errorMessage) in
-            print(errorMessage)
+        //petsViewModel.delegate = self
+        petsViewModel.loadPets(status: "sold")
+        //setUpViewModel()
+    }
+    
+    func setUpViewModel(){
+        /*petsViewModel.updateLoadingStatus = { [weak self] (status) in
+            if !status {
+                self?.stopLoading()
+            }
         }
+        
+        petsViewModel.reloadCollectionView = { [weak self] () in
+            self?.collectionView?.reloadData()
+        }*/
+        
+        petsViewModel.loadPets(status: "pending")
     }
 }
 
 extension PetsController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pets.count
+        return petsViewModel.numberOfItemsInSection()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: petCellId, for: indexPath) as! PetCell
-        cell.pet = pets[indexPath.item]
+        cell.pet = petsViewModel.getPet(indexPath: indexPath)
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(pets[indexPath.item].name as Any)
+        print(petsViewModel.getPet(indexPath: indexPath).name as Any)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 90)
+    }
+}
+
+extension PetsController: PetsViewModelDelegate{
+    
+    func reloadCollectionView(){
+        collectionView?.reloadData()
+    }
+    
+    func updateLoadingStatus(status: Bool){
+        if !status {
+            stopLoading()
+        }
+    }
+    
+    func showError(message: String){
+        print(message)
     }
 }
 
