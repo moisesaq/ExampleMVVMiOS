@@ -24,7 +24,6 @@ class PetsController: BaseCollectionController, ControllerContract {
     func setUp() {
         changeTitle(title: "Pets")
         registerCell(cellClass: PetCell.self, identifier: petCellId)
-        //petsViewModel.delegate = self
         petsViewModel.loadPets(status: "sold")
         //setUpViewModel()
     }
