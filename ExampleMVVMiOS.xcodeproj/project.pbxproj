@@ -17,6 +17,10 @@
 		8052082520071DF10054B901 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082420071DF10054B901 /* BaseCell.swift */; };
 		8052082820071E090054B901 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082720071E090054B901 /* PetCell.swift */; };
 		8052082A200732890054B901 /* PetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80520829200732890054B901 /* PetsViewModel.swift */; };
+		8066D7CD200F009200DF22C6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066D7CC200F009200DF22C6 /* CustomTabBarController.swift */; };
+		8066D7D0200F03CF00DF22C6 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066D7CF200F03CF00DF22C6 /* SearchController.swift */; };
+		8066D7D2200F03EC00DF22C6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066D7D1200F03EC00DF22C6 /* SearchViewModel.swift */; };
+		8066D7D4200F044D00DF22C6 /* LeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066D7D3200F044D00DF22C6 /* LeftPaddedTextField.swift */; };
 		806826D22005B5AF00479FB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826D12005B5AF00479FB6 /* AppDelegate.swift */; };
 		806826D72005B5B000479FB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 806826D52005B5B000479FB6 /* Main.storyboard */; };
 		806826D92005B5B000479FB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 806826D82005B5B000479FB6 /* Assets.xcassets */; };
@@ -25,13 +29,17 @@
 		806826F22005B5B000479FB6 /* ExampleMVVMiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826F12005B5B000479FB6 /* ExampleMVVMiOSUITests.swift */; };
 		806827002005CCD700479FB6 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806826FF2005CCD700479FB6 /* Pet.swift */; };
 		806827062005D25D00479FB6 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827052005D25D00479FB6 /* MainNavigationController.swift */; };
-		806827082005D2FE00479FB6 /* PetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827072005D2FE00479FB6 /* PetsController.swift */; };
+		806827082005D2FE00479FB6 /* PetsCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827072005D2FE00479FB6 /* PetsCollectionController.swift */; };
 		8068270B2005D8A300479FB6 /* BaseCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068270A2005D8A300479FB6 /* BaseCollectionController.swift */; };
 		8068270D2005D90200479FB6 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068270C2005D90200479FB6 /* ViewExtensions.swift */; };
 		8068270F2005D94F00479FB6 /* UtilsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068270E2005D94F00479FB6 /* UtilsExtensions.swift */; };
 		806827122005E10B00479FB6 /* ControllerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806827112005E10B00479FB6 /* ControllerContract.swift */; };
 		80C7B3F72009AF4D00450393 /* PetsViewModelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7B3F62009AF4D00450393 /* PetsViewModelRepresentable.swift */; };
 		80C7B3F92009C42D00450393 /* PetsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7B3F82009C42D00450393 /* PetsViewModelDelegate.swift */; };
+		80EFCC00200DAF3A0002091D /* PetDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFCBFF200DAF3A0002091D /* PetDetailController.swift */; };
+		80EFCC02200DAF860002091D /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFCC01200DAF860002091D /* BaseController.swift */; };
+		80EFCC04200DB09B0002091D /* PetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFCC03200DB09B0002091D /* PetDetailViewModel.swift */; };
+		80EFCC06200DB0C90002091D /* PetDetailModelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFCC05200DB0C90002091D /* PetDetailModelRepresentable.swift */; };
 		FA6499F41B63E82ED7AF9159 /* Pods_ExampleMVVMiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6516D774B83078E9A0A306B1 /* Pods_ExampleMVVMiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +74,10 @@
 		8052082420071DF10054B901 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		8052082720071E090054B901 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
 		80520829200732890054B901 /* PetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewModel.swift; sourceTree = "<group>"; };
+		8066D7CC200F009200DF22C6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		8066D7CF200F03CF00DF22C6 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		8066D7D1200F03EC00DF22C6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		8066D7D3200F044D00DF22C6 /* LeftPaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPaddedTextField.swift; sourceTree = "<group>"; };
 		806826CE2005B5AF00479FB6 /* ExampleMVVMiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleMVVMiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		806826D12005B5AF00479FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		806826D62005B5B000479FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,13 +92,17 @@
 		806826F32005B5B000479FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		806826FF2005CCD700479FB6 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		806827052005D25D00479FB6 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		806827072005D2FE00479FB6 /* PetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsController.swift; sourceTree = "<group>"; };
+		806827072005D2FE00479FB6 /* PetsCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionController.swift; sourceTree = "<group>"; };
 		8068270A2005D8A300479FB6 /* BaseCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionController.swift; sourceTree = "<group>"; };
 		8068270C2005D90200479FB6 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		8068270E2005D94F00479FB6 /* UtilsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtensions.swift; sourceTree = "<group>"; };
 		806827112005E10B00479FB6 /* ControllerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerContract.swift; sourceTree = "<group>"; };
 		80C7B3F62009AF4D00450393 /* PetsViewModelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewModelRepresentable.swift; sourceTree = "<group>"; };
 		80C7B3F82009C42D00450393 /* PetsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewModelDelegate.swift; sourceTree = "<group>"; };
+		80EFCBFF200DAF3A0002091D /* PetDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailController.swift; sourceTree = "<group>"; };
+		80EFCC01200DAF860002091D /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		80EFCC03200DB09B0002091D /* PetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewModel.swift; sourceTree = "<group>"; };
+		80EFCC05200DB0C90002091D /* PetDetailModelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailModelRepresentable.swift; sourceTree = "<group>"; };
 		9A5A55BF59F7CA297E6AD029 /* Pods_ExampleMVVMiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleMVVMiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C37A4A02647C3E881AD9E5 /* Pods-ExampleMVVMiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleMVVMiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleMVVMiOS/Pods-ExampleMVVMiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E06C06E188043D9A1CBAB845 /* Pods-ExampleMVVMiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleMVVMiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleMVVMiOSTests/Pods-ExampleMVVMiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,12 +173,21 @@
 			isa = PBXGroup;
 			children = (
 				8052082720071E090054B901 /* PetCell.swift */,
-				80C7B3F62009AF4D00450393 /* PetsViewModelRepresentable.swift */,
 				80520829200732890054B901 /* PetsViewModel.swift */,
+				80C7B3F62009AF4D00450393 /* PetsViewModelRepresentable.swift */,
 				80C7B3F82009C42D00450393 /* PetsViewModelDelegate.swift */,
-				806827072005D2FE00479FB6 /* PetsController.swift */,
+				806827072005D2FE00479FB6 /* PetsCollectionController.swift */,
 			);
 			path = pets;
+			sourceTree = "<group>";
+		};
+		8066D7CE200F034B00DF22C6 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				8066D7D1200F03EC00DF22C6 /* SearchViewModel.swift */,
+				8066D7CF200F03CF00DF22C6 /* SearchController.swift */,
+			);
+			path = search;
 			sourceTree = "<group>";
 		};
 		806826C52005B5AF00479FB6 = {
@@ -232,10 +257,13 @@
 		806827042005D0A100479FB6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8052082620071DF70054B901 /* pets */,
-				806827102005D96B00479FB6 /* helper */,
 				806827092005D87900479FB6 /* base */,
+				8052082620071DF70054B901 /* pets */,
+				80EFCBFE200DAE8D0002091D /* petDetail */,
+				8066D7CE200F034B00DF22C6 /* search */,
+				806827102005D96B00479FB6 /* helper */,
 				806827052005D25D00479FB6 /* MainNavigationController.swift */,
+				8066D7CC200F009200DF22C6 /* CustomTabBarController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -246,6 +274,7 @@
 				806827112005E10B00479FB6 /* ControllerContract.swift */,
 				8068270A2005D8A300479FB6 /* BaseCollectionController.swift */,
 				8052082420071DF10054B901 /* BaseCell.swift */,
+				80EFCC01200DAF860002091D /* BaseController.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -253,10 +282,21 @@
 		806827102005D96B00479FB6 /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				8066D7D3200F044D00DF22C6 /* LeftPaddedTextField.swift */,
 				8068270C2005D90200479FB6 /* ViewExtensions.swift */,
 				8068270E2005D94F00479FB6 /* UtilsExtensions.swift */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		80EFCBFE200DAE8D0002091D /* petDetail */ = {
+			isa = PBXGroup;
+			children = (
+				80EFCC03200DB09B0002091D /* PetDetailViewModel.swift */,
+				80EFCC05200DB0C90002091D /* PetDetailModelRepresentable.swift */,
+				80EFCBFF200DAF3A0002091D /* PetDetailController.swift */,
+			);
+			path = petDetail;
 			sourceTree = "<group>";
 		};
 		A86C609B6966F6C6B780DB1C /* Frameworks */ = {
@@ -552,19 +592,27 @@
 			files = (
 				806827062005D25D00479FB6 /* MainNavigationController.swift in Sources */,
 				8052082820071E090054B901 /* PetCell.swift in Sources */,
+				80EFCC02200DAF860002091D /* BaseController.swift in Sources */,
 				806827002005CCD700479FB6 /* Pet.swift in Sources */,
+				80EFCC04200DB09B0002091D /* PetDetailViewModel.swift in Sources */,
 				8068270D2005D90200479FB6 /* ViewExtensions.swift in Sources */,
 				80C7B3F72009AF4D00450393 /* PetsViewModelRepresentable.swift in Sources */,
 				8052082320070A050054B901 /* ParserContract.swift in Sources */,
+				8066D7D4200F044D00DF22C6 /* LeftPaddedTextField.swift in Sources */,
 				80C7B3F92009C42D00450393 /* PetsViewModelDelegate.swift in Sources */,
 				8052082520071DF10054B901 /* BaseCell.swift in Sources */,
 				8052082A200732890054B901 /* PetsViewModel.swift in Sources */,
-				806827082005D2FE00479FB6 /* PetsController.swift in Sources */,
+				8066D7CD200F009200DF22C6 /* CustomTabBarController.swift in Sources */,
+				806827082005D2FE00479FB6 /* PetsCollectionController.swift in Sources */,
 				806827122005E10B00479FB6 /* ControllerContract.swift in Sources */,
+				80EFCC06200DB0C90002091D /* PetDetailModelRepresentable.swift in Sources */,
 				805208192007036C0054B901 /* ServiceManager.swift in Sources */,
 				8052081C200703A10054B901 /* ServiceContract.swift in Sources */,
+				80EFCC00200DAF3A0002091D /* PetDetailController.swift in Sources */,
 				8052081E200706200054B901 /* API.swift in Sources */,
+				8066D7D0200F03CF00DF22C6 /* SearchController.swift in Sources */,
 				8068270B2005D8A300479FB6 /* BaseCollectionController.swift in Sources */,
+				8066D7D2200F03EC00DF22C6 /* SearchViewModel.swift in Sources */,
 				806826D22005B5AF00479FB6 /* AppDelegate.swift in Sources */,
 				8068270F2005D94F00479FB6 /* UtilsExtensions.swift in Sources */,
 				80520821200708B50054B901 /* PetParser.swift in Sources */,

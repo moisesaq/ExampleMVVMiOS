@@ -70,18 +70,23 @@ extension UIImageView {
 
 extension UILabel {
     
-    func toCustomLabel(textColor: UIColor! = .black, numberOfLines: Int! = 1, fontSize: UIFont) -> UILabel{
+    func toCustomLabel(textColor: UIColor! = .black, numberOfLines: Int! = 1, fontSize: UIFont! = UIFont.boldSystemFont(ofSize: 15)) -> UILabel{
         self.text = "Text label"
         self.textColor = textColor
         self.numberOfLines = numberOfLines
         self.font = fontSize
         return self
     }
+    
+    func alignmentCenter() -> UILabel {
+        self.textAlignment = .center
+        return self
+    }
 }
 
 extension UIActivityIndicatorView {
     
-    func toLoadingStyle(start: Bool) -> UIActivityIndicatorView {
+    func toLoadingStyle(start: Bool! = false) -> UIActivityIndicatorView {
         self.activityIndicatorViewStyle = .gray
         self.translatesAutoresizingMaskIntoConstraints = false
         if start {

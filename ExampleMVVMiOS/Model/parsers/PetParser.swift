@@ -5,24 +5,6 @@
 //  Created by Moises Apaza on 10/01/2018.
 //  Copyright © 2018 Moises Apaza. All rights reserved.
 //
-/*{
- "id": 1515012864778,
- "category": {
- "id": 0,
- "name": "1234"
- },
- "name": "doggie_updated",
- "photoUrls": [
- "string"
- ],
- "tags": [
- {
- "id": 0,
- "name": "1234"
- }
- ],
- "status": "sold"
- }*/
 
 import Foundation
 
@@ -35,7 +17,7 @@ class PetParser: Decodable {
     var status: String = ""
     
     func toPet() -> Pet{
-        return Pet(id: String(id), name: name ?? "none", category: getCategory(), photoUrl: getPhoto())
+        return Pet(id: id, name: name ?? "none", category: getCategory(), photoUrl: getPhoto(), status: status)
     }
     
     func getCategory() -> String{

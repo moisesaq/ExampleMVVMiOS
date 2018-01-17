@@ -8,12 +8,10 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class BaseCollectionController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     lazy var activityIndicatorView: UIActivityIndicatorView = {
-        return UIActivityIndicatorView().toLoadingStyle(start: true)
+        return UIActivityIndicatorView().toLoadingStyle()
     }()
     
     override func viewDidLoad() {
@@ -50,7 +48,11 @@ class BaseCollectionController: UICollectionViewController, UICollectionViewDele
         }
     }
     
-    func stopLoading(){
-        activityIndicatorView.stopAnimating()
+    func changeStatusLoading(animate: Bool){
+        animate ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
     }
+    
+    /*func stopLoading(){
+        activityIndicatorView.stopAnimating()
+    }*/
 }

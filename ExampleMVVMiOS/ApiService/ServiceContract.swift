@@ -11,4 +11,6 @@ import Foundation
 protocol ServiceContract {
     
     func getPetsByStatus(status: String, completion: @escaping ([Pet]) -> Void, error: @escaping (String) -> Void)
+    
+    func findPetById(id: String, completion: @escaping (Pet) -> (Void), error: @escaping () -> (Void))
 }

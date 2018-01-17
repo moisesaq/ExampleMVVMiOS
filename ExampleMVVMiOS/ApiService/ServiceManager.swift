@@ -15,7 +15,7 @@ class ServiceManager: ServiceContract {
     
     func getPetsByStatus(status: String, completion: @escaping ([Pet]) -> (), error: @escaping (String) -> ()) {
         let parameters = ["status" : status]
-        getRequestHttp(url: API.PETS, parameters: parameters, responseHandler: { (data) in
+        getRequestHttp(url: API.PETS_BY_STATUS, parameters: parameters, responseHandler: { (data) in
             do{
                 let petsParser = try JSONDecoder().decode([PetParser].self, from: data)
                 completion(petsParser.map({ return $0.toPet() }))
@@ -25,6 +25,22 @@ class ServiceManager: ServiceContract {
             }
         }) {
             error("Error")
+        }
+    }
+    
+    func findPetById(id: String, completion: @escaping (Pet) -> (Void), error: @escaping () -> (Void)){
+        let url = API.PET + id
+        print("URL: " + url)
+        getRequestHttp(url: url, parameters: nil, responseHandler: { (data) in
+            do{
+                let petParser = try JSONDecoder().decode(PetParser.self, from: data)
+                completion(petParser.toPet())
+            }catch let errorJson{
+                self.log(message: errorJson)
+                error()
+            }
+        }) {
+            error()
         }
     }
     

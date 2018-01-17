@@ -10,7 +10,7 @@ import UIKit
 
 private let petCellId = "PetCell"
 
-class PetsController: BaseCollectionController, ControllerContract {
+class PetsCollectionController: BaseCollectionController, ControllerContract {
     
     lazy var petsViewModel: PetsViewModelRepresentable = {
         return PetsViewModel(delegate: self)
@@ -25,25 +25,10 @@ class PetsController: BaseCollectionController, ControllerContract {
         changeTitle(title: "Pets")
         registerCell(cellClass: PetCell.self, identifier: petCellId)
         petsViewModel.loadPets(status: "sold")
-        //setUpViewModel()
-    }
-    
-    func setUpViewModel(){
-        /*petsViewModel.updateLoadingStatus = { [weak self] (status) in
-            if !status {
-                self?.stopLoading()
-            }
-        }
-        
-        petsViewModel.reloadCollectionView = { [weak self] () in
-            self?.collectionView?.reloadData()
-        }*/
-        
-        petsViewModel.loadPets(status: "pending")
     }
 }
 
-extension PetsController {
+extension PetsCollectionController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return petsViewModel.numberOfItemsInSection()
@@ -56,7 +41,9 @@ extension PetsController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(petsViewModel.getPet(indexPath: indexPath).name as Any)
+        let controller = PetDetailController()
+        controller.pet = petsViewModel.getPet(indexPath: indexPath)
+        navigationController?.viewControllers += [controller]
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -64,16 +51,14 @@ extension PetsController {
     }
 }
 
-extension PetsController: PetsViewModelDelegate{
+extension PetsCollectionController: PetsViewModelDelegate {
     
     func reloadCollectionView(){
         collectionView?.reloadData()
     }
     
     func updateLoadingStatus(status: Bool){
-        if !status {
-            stopLoading()
-        }
+        changeStatusLoading(animate: status)
     }
     
     func showError(message: String){
@@ -81,8 +66,8 @@ extension PetsController: PetsViewModelDelegate{
     }
 }
 
-extension PetsController {
-    static func newInstance() -> PetsController{
-        return PetsController(collectionViewLayout: UICollectionViewFlowLayout())
+extension PetsCollectionController {
+    static func newInstance() -> PetsCollectionController{
+        return PetsCollectionController(collectionViewLayout: UICollectionViewFlowLayout())
     }
 }

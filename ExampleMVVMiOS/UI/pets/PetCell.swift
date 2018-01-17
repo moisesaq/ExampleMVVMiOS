@@ -11,7 +11,7 @@ import SnapKit
 import Kingfisher
 
 class PetCell: BaseCell{
-    private let PADDING: CGFloat = 10
+    private let PADDING: CGFloat = 7
     private let HEIGHT_TEXT_FIELD: CGFloat = 30
     private let testImage = "https://bcdn.newshunt.com/cmd/resize/400x400_60/fetchdata12/images/e6/50/25/e650252d1127973046446cb82f466e46.jpg"
     
@@ -29,11 +29,11 @@ class PetCell: BaseCell{
     }()
     
     let nameLabel: UILabel = {
-        return UILabel().toCustomLabel(fontSize: UIFont.boldSystemFont(ofSize: 15))
+        return UILabel().toCustomLabel()
     }()
     
     let categoryLabel: UILabel = {
-        return UILabel().toCustomLabel(textColor: .gray, fontSize: UIFont.systemFont(ofSize: 12))
+        return UILabel().toCustomLabel(textColor: .gray, fontSize: UIFont.systemFont(ofSize: 13))
     }()
     
     override func setUp() {
@@ -56,20 +56,19 @@ class PetCell: BaseCell{
         }
         
         nameLabel.snp.makeConstraints { (make) in
-            setUpContraintsLabel(make: make)
-            make.top.equalTo(self).offset(PADDING)
+            setUpContraintsLabel(make: make).top.equalTo(self).offset(PADDING)
         }
         
         categoryLabel.snp.makeConstraints { (make) in
-            setUpContraintsLabel(make: make)
-            make.top.equalTo(nameLabel.snp.bottom)
+            setUpContraintsLabel(make: make).top.equalTo(nameLabel.snp.bottom)
         }
     }
     
-    private func setUpContraintsLabel(make: ConstraintMaker){
+    private func setUpContraintsLabel(make: ConstraintMaker) -> ConstraintMaker{
         make.left.equalTo(imageView.snp.right).offset(10)
         make.right.equalTo(self)
         make.height.equalTo(HEIGHT_TEXT_FIELD)
+        return make
     }
     
     private func createEdgeInsets(padding: CGFloat) -> UIEdgeInsets{

@@ -11,15 +11,17 @@
 import Foundation
 
 class Pet{
-    var id: String?
+    var id: Int?
     var name: String?
     var category: String?
     var photoUrl: String?
+    var status: String?
     
-    init(id: String, name: String, category: String, photoUrl: String) {
+    init(id: Int, name: String, category: String, photoUrl: String, status: String) {
         self.id = id
         self.name = name
         self.category = category
         self.photoUrl = photoUrl
+        self.status = status
     }
 }

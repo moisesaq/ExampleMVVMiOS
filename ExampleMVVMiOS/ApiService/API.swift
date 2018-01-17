@@ -10,5 +10,6 @@ import Foundation
 
 class API {
     static let BASE_URL = "http://petstore.swagger.io/v2/"
-    static let PETS = BASE_URL + "pet/findByStatus"
+    static let PET = BASE_URL + "pet/"
+    static let PETS_BY_STATUS = PET + "findByStatus"
 }

@@ -14,7 +14,7 @@ class MainNavigationController: UINavigationController {
         super.viewDidLoad()
         view.backgroundColor = .yellow
         //viewControllers = [PetsController.newInstance()]
-        viewControllers.append(PetsController.newInstance())
+        viewControllers.append(PetsCollectionController.newInstance())
     }
     
     override func show(_ vc: UIViewController, sender: Any?) {
