@@ -8,6 +8,8 @@
 
 import Foundation
 import Alamofire
+import RxAlamofire
+import RxSwift
 
 class ServiceManager: ServiceContract {
     
@@ -58,5 +60,14 @@ class ServiceManager: ServiceContract {
     
     private func log(message: Any){
         print("ERROR", message)
+    }
+    
+    // RxAlamofire
+    func findPetsByStatus(status: String) -> Observable<[Pet]>{
+        let parameters = ["status" : status]
+        return RxAlamofire.requestData(.get, API.PETS_BY_STATUS, parameters: parameters).map { (urlResponse, data) -> [Pet] in
+            let petsParser = try JSONDecoder().decode([PetParser].self, from: data)
+            return petsParser.map({ return $0.toPet() })
+        }.asObservable()
     }
 }

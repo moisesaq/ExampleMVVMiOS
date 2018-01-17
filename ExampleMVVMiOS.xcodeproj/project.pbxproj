@@ -216,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				8052081A200703730054B901 /* ApiService */,
-				806827042005D0A100479FB6 /* UI */,
 				806827032005CD0700479FB6 /* Model */,
+				806827042005D0A100479FB6 /* UI */,
 				806826D12005B5AF00479FB6 /* AppDelegate.swift */,
 				806826D52005B5B000479FB6 /* Main.storyboard */,
 				806826D82005B5B000479FB6 /* Assets.xcassets */,

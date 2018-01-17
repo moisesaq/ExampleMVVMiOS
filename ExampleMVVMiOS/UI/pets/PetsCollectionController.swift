@@ -24,7 +24,7 @@ class PetsCollectionController: BaseCollectionController, ControllerContract {
     func setUp() {
         changeTitle(title: "Pets")
         registerCell(cellClass: PetCell.self, identifier: petCellId)
-        petsViewModel.loadPets(status: "sold")
+        petsViewModel.loadPets(status: "pending")
     }
 }
 
