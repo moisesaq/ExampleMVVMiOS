@@ -21,6 +21,6 @@ class BaseController: UIViewController {
     
     func changeTitle(title: String){
         self.navigationItem.title = title
-        self.navigationController?.navigationBar.tintColor = .purple
+        self.navigationController?.navigationBar.tintColor = .darkGray
     }
 }

@@ -13,7 +13,7 @@
 		8052081C200703A10054B901 /* ServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052081B200703A10054B901 /* ServiceContract.swift */; };
 		8052081E200706200054B901 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052081D200706200054B901 /* API.swift */; };
 		80520821200708B50054B901 /* PetParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80520820200708B50054B901 /* PetParser.swift */; };
-		8052082320070A050054B901 /* ParserContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082220070A050054B901 /* ParserContract.swift */; };
+		8052082320070A050054B901 /* BaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082220070A050054B901 /* BaseParser.swift */; };
 		8052082520071DF10054B901 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082420071DF10054B901 /* BaseCell.swift */; };
 		8052082820071E090054B901 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8052082720071E090054B901 /* PetCell.swift */; };
 		8052082A200732890054B901 /* PetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80520829200732890054B901 /* PetsViewModel.swift */; };
@@ -70,7 +70,7 @@
 		8052081B200703A10054B901 /* ServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContract.swift; sourceTree = "<group>"; };
 		8052081D200706200054B901 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		80520820200708B50054B901 /* PetParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetParser.swift; sourceTree = "<group>"; };
-		8052082220070A050054B901 /* ParserContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserContract.swift; sourceTree = "<group>"; };
+		8052082220070A050054B901 /* BaseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseParser.swift; sourceTree = "<group>"; };
 		8052082420071DF10054B901 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		8052082720071E090054B901 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
 		80520829200732890054B901 /* PetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewModel.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				80520820200708B50054B901 /* PetParser.swift */,
-				8052082220070A050054B901 /* ParserContract.swift */,
+				8052082220070A050054B901 /* BaseParser.swift */,
 			);
 			path = parsers;
 			sourceTree = "<group>";
@@ -173,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				8052082720071E090054B901 /* PetCell.swift */,
-				80520829200732890054B901 /* PetsViewModel.swift */,
 				80C7B3F62009AF4D00450393 /* PetsViewModelRepresentable.swift */,
+				80520829200732890054B901 /* PetsViewModel.swift */,
 				80C7B3F82009C42D00450393 /* PetsViewModelDelegate.swift */,
 				806827072005D2FE00479FB6 /* PetsCollectionController.swift */,
 			);
@@ -292,8 +292,8 @@
 		80EFCBFE200DAE8D0002091D /* petDetail */ = {
 			isa = PBXGroup;
 			children = (
-				80EFCC03200DB09B0002091D /* PetDetailViewModel.swift */,
 				80EFCC05200DB0C90002091D /* PetDetailModelRepresentable.swift */,
+				80EFCC03200DB09B0002091D /* PetDetailViewModel.swift */,
 				80EFCBFF200DAF3A0002091D /* PetDetailController.swift */,
 			);
 			path = petDetail;
@@ -597,7 +597,7 @@
 				80EFCC04200DB09B0002091D /* PetDetailViewModel.swift in Sources */,
 				8068270D2005D90200479FB6 /* ViewExtensions.swift in Sources */,
 				80C7B3F72009AF4D00450393 /* PetsViewModelRepresentable.swift in Sources */,
-				8052082320070A050054B901 /* ParserContract.swift in Sources */,
+				8052082320070A050054B901 /* BaseParser.swift in Sources */,
 				8066D7D4200F044D00DF22C6 /* LeftPaddedTextField.swift in Sources */,
 				80C7B3F92009C42D00450393 /* PetsViewModelDelegate.swift in Sources */,
 				8052082520071DF10054B901 /* BaseCell.swift in Sources */,

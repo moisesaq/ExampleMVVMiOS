@@ -48,11 +48,6 @@ extension UIImageView {
         return self
     }
     
-    func toImageViewCoer() -> UIImageView{
-        self.backgroundColor = UIColor.light
-        return self
-    }
-    
     func toIconStyle(image: String?, tint: UIColor) -> UIImageView{
         self.contentMode = .scaleToFill
         self.tintColor = tint

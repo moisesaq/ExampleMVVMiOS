@@ -16,4 +16,6 @@ protocol ServiceContract {
     func findPetById(id: String, completion: @escaping (Pet) -> (Void), error: @escaping () -> (Void))
     
     func findPetsByStatus(status: String) -> Observable<[Pet]>
+    
+    func findPetsById(id: String) -> Observable<Pet>
 }

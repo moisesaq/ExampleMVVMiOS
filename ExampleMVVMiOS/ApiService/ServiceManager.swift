@@ -12,7 +12,7 @@ import RxAlamofire
 import RxSwift
 
 class ServiceManager: ServiceContract {
-    
+
     static let sharedInstance = ServiceManager()
     
     func getPetsByStatus(status: String, completion: @escaping ([Pet]) -> (), error: @escaping (String) -> ()) {
@@ -32,7 +32,6 @@ class ServiceManager: ServiceContract {
     
     func findPetById(id: String, completion: @escaping (Pet) -> (Void), error: @escaping () -> (Void)){
         let url = API.PET + id
-        print("URL: " + url)
         getRequestHttp(url: url, parameters: nil, responseHandler: { (data) in
             do{
                 let petParser = try JSONDecoder().decode(PetParser.self, from: data)
@@ -69,5 +68,13 @@ class ServiceManager: ServiceContract {
             let petsParser = try JSONDecoder().decode([PetParser].self, from: data)
             return petsParser.map({ return $0.toPet() })
         }.asObservable()
+    }
+    
+    func findPetsById(id: String) -> Observable<Pet> {
+        let url = API.PET + id
+        return RxAlamofire.requestData(.get, url).map({ (urlResponse, data) -> Pet in
+            let petParser = try JSONDecoder().decode(PetParser.self, from: data)
+            return petParser.toPet()
+        }).asObservable()
     }
 }

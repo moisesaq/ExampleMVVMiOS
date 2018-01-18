@@ -18,11 +18,11 @@ class PetDetailController: BaseController {
     }()
     
     let categoryLabel: UILabel = {
-        return UILabel().toCustomLabel(numberOfLines: 2).alignmentCenter()
+        return UILabel().toCustomLabel(numberOfLines: 2, fontSize: UIFont.systemFont(ofSize: 12)).alignmentCenter()
     }()
     
     let statusLabel: UILabel = {
-        return UILabel().toCustomLabel(numberOfLines: 2).alignmentCenter()
+        return UILabel().toCustomLabel(numberOfLines: 2, fontSize: UIFont.systemFont(ofSize: 12)).alignmentCenter()
     }()
     
     lazy var petDetailModel: PetDetailViewModel = {

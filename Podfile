@@ -8,6 +8,7 @@ target 'ExampleMVVMiOS' do
   pod 'SnapKit', '~> 4.0.0'
   pod 'IHKeyboardAvoiding'
   pod 'RxAlamofire'
+  pod 'RAMAnimatedTabBarController'
 
   # Pods for ExampleMVVMiOS
 

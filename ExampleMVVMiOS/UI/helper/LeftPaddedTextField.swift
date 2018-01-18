@@ -20,6 +20,7 @@ class LeftPaddedTextField: UITextField{
 }
 
 extension LeftPaddedTextField {
+    
     func toCustomTextField(holder: String, returnType: UIReturnKeyType! = UIReturnKeyType.default) -> LeftPaddedTextField{
         self.placeholder = holder
         //self.borderStyle = UITextBorderStyle.roundedRect

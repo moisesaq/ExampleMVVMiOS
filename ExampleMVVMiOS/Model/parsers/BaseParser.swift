@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ParserContract {
+protocol BaseParser {
     
     func getItem<T>() -> T
     

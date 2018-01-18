@@ -6,10 +6,11 @@
 //  Copyright © 2018 Moises Apaza. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 class PetDetailViewModel: PetDetailModelRepresentable {
     let serviceManger: ServiceContract
+    let disposeBag = DisposeBag()
     
     var pet: Pet? {
         didSet{
@@ -33,11 +34,20 @@ class PetDetailViewModel: PetDetailModelRepresentable {
     
     func loadPet(id: Int) {
         self.isLoading = true
-        serviceManger.findPetById(id: String(id), completion: { (pet) -> (Void) in
+        serviceManger.findPetsById(id: String(id))
+            .debug()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { self.pet = $0 }, onError: { self.error(error: $0) },onCompleted: { self.isLoading = false })
+            .disposed(by: disposeBag)
+        /*serviceManger.findPetById(id: String(id), completion: { (pet) -> (Void) in
             self.isLoading = false
             self.pet = pet
         }) { () -> (Void) in
             self.showError?("Error find pet")
-        }
+        }*/
+    }
+    
+    private func error(error: Error){
+        showError?("Error")
     }
 }

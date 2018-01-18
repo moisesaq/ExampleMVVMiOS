@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.6.0)
   - IHKeyboardAvoiding (4.2)
   - Kingfisher (4.6.1)
+  - RAMAnimatedTabBarController (3.0.1)
   - RxAlamofire (4.0.0):
     - RxAlamofire/Core (= 4.0.0)
   - RxAlamofire/Core (4.0.0):
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.5)
   - IHKeyboardAvoiding
   - Kingfisher (~> 4.0)
+  - RAMAnimatedTabBarController
   - RxAlamofire
   - SnapKit (~> 4.0.0)
 
@@ -21,10 +23,11 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   IHKeyboardAvoiding: 9fbf816b7c3c84911964802ff110d12caf40ebef
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  RAMAnimatedTabBarController: 78bafa7a1c1b162f0d4a86a936c0d1ee4a06ffcc
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: d7b6c206fabab38c885cf62bd1f06b500923c664
+PODFILE CHECKSUM: 6ea662e33e17340593f5aac206ce155ca09c84b6
 
 COCOAPODS: 1.2.1

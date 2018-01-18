@@ -21,10 +21,10 @@ class PetParser: Decodable {
     }
     
     func getCategory() -> String{
-        guard let category = category else{
-            return "none"
+        if let cat = category {
+            return cat.name
         }
-        return category.name
+        return "none"
     }
     
     func getPhoto() -> String {
