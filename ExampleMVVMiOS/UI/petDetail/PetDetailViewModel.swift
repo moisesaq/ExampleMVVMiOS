@@ -35,16 +35,9 @@ class PetDetailViewModel: PetDetailModelRepresentable {
     func loadPet(id: Int) {
         self.isLoading = true
         serviceManger.findPetsById(id: String(id))
-            .debug()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { self.pet = $0 }, onError: { self.error(error: $0) },onCompleted: { self.isLoading = false })
             .disposed(by: disposeBag)
-        /*serviceManger.findPetById(id: String(id), completion: { (pet) -> (Void) in
-            self.isLoading = false
-            self.pet = pet
-        }) { () -> (Void) in
-            self.showError?("Error find pet")
-        }*/
     }
     
     private func error(error: Error){

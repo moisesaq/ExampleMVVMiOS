@@ -30,16 +30,9 @@ class PetsViewModel: PetsViewModelRepresentable{
         serviceManger.findPetsByStatus(status: status)
             .debug()
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { self.pets += $0 }, onError: { self.error(error: $0) }, onCompleted: {
+            .subscribe(onNext: { self.pets = $0 }, onError: { self.error(error: $0) }, onCompleted: {
                 self.delegate?.updateLoadingStatus(status: false)
             }).disposed(by: disposeBag)
-        /*ServiceManager.sharedInstance.getPetsByStatus(status: status, completion: { (pets) in
-            self.delegate?.updateLoadingStatus(status: false)
-            self.pets += pets
-        }) { (errorMessage) in
-            self.delegate?.showError(message: "Error :(")
-            print(errorMessage)
-        }*/
     }
     
     private func error(error: Error){

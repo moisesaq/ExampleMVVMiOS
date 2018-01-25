@@ -66,7 +66,7 @@ extension UIImageView {
 extension UILabel {
     
     func toCustomLabel(textColor: UIColor! = .black, numberOfLines: Int! = 1, fontSize: UIFont! = UIFont.boldSystemFont(ofSize: 15)) -> UILabel{
-        self.text = "Text label"
+        self.text = "_ _ _ _ _"
         self.textColor = textColor
         self.numberOfLines = numberOfLines
         self.font = fontSize

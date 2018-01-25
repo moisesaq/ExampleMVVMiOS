@@ -9,8 +9,10 @@
 import Foundation
 
 protocol BaseParser {
+    associatedtype T
+    associatedtype U
     
-    func getItem<T>() -> T
+    func getItem() -> T
     
-    func postItem<T, U>(item: T) -> U
+    func postItem(item: T) -> U?
 }

@@ -60,10 +60,8 @@ class PetDetailController: BaseController {
     }
     
     private func reloadPet(){
-        petLabel.text = "Pet \r\n\(petDetailModel.pet?.name ?? "Pet")"
-        petLabel.sizeToFit()
+        petLabel.text = petDetailModel.pet?.name ?? "Pet"
         categoryLabel.text = "Category \r\n\(petDetailModel.pet?.category ?? "Category")"
-        categoryLabel.sizeToFit()
         statusLabel.text = "Status \r\n\(petDetailModel.pet?.status ?? "Status")"
     }
 }
