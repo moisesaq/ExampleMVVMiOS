@@ -3,6 +3,11 @@ PODS:
   - IHKeyboardAvoiding (4.2)
   - Kingfisher (4.6.1)
   - RAMAnimatedTabBarController (3.0.1)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
   - RxAlamofire (4.0.0):
     - RxAlamofire/Core (= 4.0.0)
   - RxAlamofire/Core (4.0.0):
@@ -16,18 +21,33 @@ DEPENDENCIES:
   - IHKeyboardAvoiding
   - Kingfisher (~> 4.0)
   - RAMAnimatedTabBarController
+  - RealmSwift
   - RxAlamofire
   - SnapKit (~> 4.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - IHKeyboardAvoiding
+    - Kingfisher
+    - RAMAnimatedTabBarController
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxSwift
+    - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   IHKeyboardAvoiding: 9fbf816b7c3c84911964802ff110d12caf40ebef
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   RAMAnimatedTabBarController: 78bafa7a1c1b162f0d4a86a936c0d1ee4a06ffcc
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 6ea662e33e17340593f5aac206ce155ca09c84b6
+PODFILE CHECKSUM: 98ff0eb290a4af20d666c79606a5292cd1b9eb54
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.2

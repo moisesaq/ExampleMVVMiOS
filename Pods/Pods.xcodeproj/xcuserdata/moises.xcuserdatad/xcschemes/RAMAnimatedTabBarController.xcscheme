@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DA431F2DF6F9AC2B830AA84D1B4B8014'
-               BlueprintName = 'RAMAnimatedTabBarController'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RAMAnimatedTabBarController.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BAB3AEC5A7A37EFD439C9AE6DCF2B984"
+               BlueprintName = "RAMAnimatedTabBarController"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "RAMAnimatedTabBarController.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

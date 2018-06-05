@@ -8,6 +8,7 @@
 
 import UIKit
 import IHKeyboardAvoiding
+import RealmSwift
 
 class SearchController: BaseController {
     
@@ -18,6 +19,17 @@ class SearchController: BaseController {
     lazy var textField: UITextField = {
         return LeftPaddedTextField().toCustomTextField(holder: "Pet ID").addDelegate(delegate: self)
     }()
+    
+    lazy var testRealmButton: UIButton = {
+        return UIButton().toCustomButton(title: "Test realm", color: .accent).addAction(target: self, action: #selector(testRealm))
+    }()
+    
+    @objc func testRealm(){
+        let user = User()
+        print(user.name)
+        
+        //let real
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,4 +61,8 @@ extension SearchController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
+}
+
+class User: Object {
+    @objc dynamic var name = "user"
 }

@@ -9,6 +9,7 @@ target 'ExampleMVVMiOS' do
   pod 'IHKeyboardAvoiding'
   pod 'RxAlamofire'
   pod 'RAMAnimatedTabBarController'
+  pod 'RealmSwift'
 
   # Pods for ExampleMVVMiOS
 

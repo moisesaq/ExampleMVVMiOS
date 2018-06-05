@@ -37,7 +37,7 @@ class PetsViewModel: PetsViewModelRepresentable{
     
     private func error(error: Error){
         print(error)
-        delegate?.showError(message: "Error")
+        delegate?.showError(message: "Error loading pets :(")
     }
     
     func numberOfItemsInSection() -> Int {
